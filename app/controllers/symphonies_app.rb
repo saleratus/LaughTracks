@@ -8,7 +8,7 @@ class SymphoniesApp < Sinatra::Base
     elsif params[:id]
       @composers = Composer.get_by_id(params[:id])
     else
-
+      @composers = Composer.all
     end
     erb :"composers/index"
   end
