@@ -1,0 +1,54 @@
+
+
+body {
+  background-color: white;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 14px;
+}
+
+
+#wrapper {
+  width: 1140px;
+  margin: auto;
+  margin-top: 10px;
+  font-family: arial, helvetica, sans-serif;
+}
+
+#banner {
+  padding: 20px 0;
+}
+
+#sortbar {
+  padding: 20px 0;
+}
+
+#selectionbar {
+  float: left;
+  width: 250px;
+}
+
+#composerlist {
+  margin-left:250px;
+}
+
+#pagestats {
+  padding: 20px 0;
+}
