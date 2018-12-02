@@ -11,7 +11,7 @@ RSpec.describe 'Composer Page Features' do
       Composer.create(surname: "Haydn", forename: "Franz Joseph", city: "Vienna", dob: 1732, dod: 1809, age: 77, thumbnail: "/images/haydn.jpg")
       Composer.create(surname: "Mozart", forename: "Wolfgang Amadeus", city: "Vienna", dob: 1756, dod: 1791, age: 35, thumbnail: "/images/mozart.jpg")
       Composer.create(surname: "Beethoven", forename: "Ludwig van", city: "Vienna", dob: 1770, dod: 1827, age: 56, thumbnail: "/images/beethoven.jpg")
-      visit 'composers'
+      visit '/composers'
       expect(page).to have_content("Haydn")
       expect(page).to have_content("Mozart")
       expect(page).to have_content("Beethoven")
@@ -21,7 +21,7 @@ RSpec.describe 'Composer Page Features' do
       Composer.create(surname: "Haydn", forename: "Franz Joseph", city: "Vienna", dob: 1732, dod: 1809, age: 77, thumbnail: "/images/haydn.jpg")
       Composer.create(surname: "Mozart", forename: "Wolfgang Amadeus", city: "Vienna", dob: 1756, dod: 1791, age: 35, thumbnail: "/images/mozart.jpg")
       Composer.create(surname: "Beethoven", forename: "Ludwig van", city: "Vienna", dob: 1770, dod: 1827, age: 56, thumbnail: "/images/beethoven.jpg")
-      visit 'composers'
+      visit '/composers'
       expect(page).to have_content("Average Age at Death: 56")
     end
 

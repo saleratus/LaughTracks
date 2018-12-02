@@ -1,24 +1,21 @@
 
 
 
-<h2>Great Symphony Composers</h2>
+<h3>Great Symphony Composers</h3>
 
-<p>Average Age at Death: <%= Composer.average_age.to_i %></p>
-<p>Average Runtime of All Symphonies <%= Symphony.average_runtime.to_i %></p>
+<p>Total Composers: <%= @composers.total_shown %></p>
+<p>Average Age at Death: <%= @composers.average_age.to_i %></p>
+<p>Average Symphony Runtime: <%= @composers.get_symphonies.average_runtime.to_i %></p>
+<p>Cities of Residence: <%= @composers.distinct.pluck(:city).join(', ') %></p>
+<p>Total Symphonies shown: <%= @composers.get_symphonies.count %></p>
 
-<p>Cities of Residence <%= Composer.distinct.pluck(:city).join(" ")  %></p>
-
-
-   <% @composers.each do |composer| %>
-    <ul>
-      <li><%= composer.id %></li>
-
-      <li><%= composer.surname %></li>
-      <li><%= composer.forename %></li>
-      <% composer.symphonies.each do |symph| %>
-      <li><%= symph.name %></li>
-      <% end %>
-      <img src=<%= composer.thumbnail %>  alt=<%= composer.surname %>>
-
-    </ul>
-   <% end %>
+<% @composers.each do |composer| %>
+  <p></p>
+  <img src=<%= composer.thumbnail %>  alt=<%= composer.surname %>>
+  <h4><%= composer.formatted_string %></h4>
+  <% symphs = composer.symphonies %>
+  <% symphs.each do |symph| %>
+    <p><%= symph.formatted_string %>
+  <% end %>
+  <p><%= "Count: #{symphs.count} Average time: #{symphs.average_runtime.to_i}" %></p>
+<% end %>

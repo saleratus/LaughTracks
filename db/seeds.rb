@@ -100,11 +100,9 @@ Symphony.create(name: "Symphony No. 8", key: "E-flat major", opus: "", moniker: 
 Symphony.create(name: "Symphony No. 7", key: "C major", opus: "Op. 105", moniker: "", year: 1924, runtime: 23, composer_id: 14)
 
 Symphony.create(name: "Symphony No. 2", key: "E minor", opus: "Op. 27", moniker: "", year: 1907, runtime: 56, composer_id: 15)
-
 Symphony.create(name: "Symphony No. 3", key: "", opus: "", moniker: "", year: 1946, runtime: 45, composer_id: 16)
 
 Symphony.create(name: "Symphony No. 5", key: "D minor", opus: "Op. 47", moniker: "", year: 1937, runtime: 44, composer_id: 17)
 
 Symphony.create(name: "Symphony No. 3", key: "", opus: "Op. 36", moniker: "Symphony of Sorrowful Songs", year: 1976, runtime: 53, composer_id: 18)
-
 Symphony.create(name: "Symphony", key: "D minor", opus: "", moniker: "", year: 1888, runtime: 37, composer_id: 19)
