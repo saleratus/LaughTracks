@@ -30,7 +30,7 @@ class Composer < ActiveRecord::Base
   end
 
   def formatted_string
-    "#{forename} #{surname} (#{dob} - #{dod}), Age: #{age}, City: #{city}"
+    "#{forename} #{surname} (#{dob} - #{dod}), Age: #{age}, #{city}"
   end
 
 end
