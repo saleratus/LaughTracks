@@ -1,54 +1,105 @@
 
 
 body {
-  background-color: white;
+  background-image: url('../images/orangebg.jpg');
+  background-repeat: repeat;
 }
 
 ul li {
   list-style-type: none;
 }
 
-ul li a {
-
-}
-
 h1 {
   font-size: 40px;
+  padding: 10px 0;
 }
 
 h2 {
   font-size: 28px;
 }
 
+h3 {
+  font-size: 24px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+h4 {
+  font-size: 18px;
+  text-align: left;
+  padding: 0 0 10px 0;
+}
+
 p {
   font-size: 14px;
+  padding: 0 0 10px 0;
 }
 
 
 #wrapper {
-  width: 1140px;
+  width: 840px;
   margin: auto;
-  margin-top: 10px;
-  font-family: arial, helvetica, sans-serif;
+  margin-top: 20px;
+  padding: 0 40px;
+  background-color: white;
+  font-family: baskerville, serif;
 }
 
 #banner {
   padding: 20px 0;
 }
 
+#title {
+  text-align: left;
+  margin: 25px 0 0 5px;
+}
+
 #sortbar {
+  clear: both;
+}
+
+#sortbar ul {
+  padding: 10px 0 10px 0; margin: 0;
+  border-top: 1px #000 dotted;
+  border-bottom: 1px #000 dotted;
+}
+
+#sortbar ul li {
+  display: inline;
+  list-style-type: none;
+  margin: 0 40px 0 5px;
+}
+
+#contents {
+  padding: 0 0 40px 0;
+}
+
+.composer_entry {
+  clear: both;
   padding: 20px 0;
 }
 
-#selectionbar {
+.photocolumn {
   float: left;
-  width: 250px;
+  width: 200px;
+}
+.photocolumn img {
+    width: 200px;
+    height: 270px;
 }
 
-#composerlist {
-  margin-left:250px;
+.rightside {
+  width: 640;
+  margin: 10px 0 0 235px;
+  text-align: left;
+}
+
+.symphony_listing {
+  padding: 0 0 0 0;
 }
 
 #pagestats {
+  clear: both;
+  border-top: 1px #000 dotted;
   padding: 20px 0;
 }

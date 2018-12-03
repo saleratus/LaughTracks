@@ -17,7 +17,7 @@
 
       <div id="banner">
         <div id="title">
-          <h1>Great Symphony Composers</h1>
+          <h1>Great Symphonic Composers</h1>
           <h2>& Their Symphonies</h2>
         </div>
       </div>
@@ -25,41 +25,43 @@
 
       <div id="sortbar">
         <ul>
-          <li><a href="/composers&sort=name">Last Name</a></li>
-          <li><a href="/composers&sort=dob">Date of Birth</a></li>
-          <li><a href="/composers&sort=dod">Date of Death</a></li>
+          <li><a href="/composers?sort=name">Last Name</a></li>
+          <li><a href="/composers?sort=dob">Date of Birth</a></li>
+          <li><a href="/composers?sort=dod">Date of Death</a></li>
         </ul>
       </div>
 
-
-      <div id="selectionbar">
-        <ul>
-          <li><a href="/composers&sort=name">Haydn</a></li>
-          <li><a href="/composers&sort=dob">Mozart</a></li>
-          <li><a href="/composers&sort=dod">Beethoven</a></li>
-        </ul>
-      </div>
-
-
-      <div id="composerlist">
+      <div id="contents">
         <% @composers.each do |composer| %>
-          <p></p>
-          <img src=<%= composer.thumbnail %>  alt=<%= composer.surname %>>
-          <h4><%= composer.formatted_string %></h4>
-          <% symphs = composer.symphonies %>
-          <% symphs.each do |symph| %>
-            <p><%= symph.formatted_string %>
-          <% end %>
-          <p><%= "Count: #{symphs.count} Average time: #{symphs.average_runtime.to_i}" %></p>
+          <div class="composer_entry">
+
+            <div class="photocolumn">
+                <img src=<%= composer.thumbnail %>  alt=<%= composer.surname %>>
+                <h3><%= composer.surname %></h3>
+            </div>
+
+            <div class="rightside">
+              <h4><%= composer.formatted_string %></h4
+              <p></p>
+
+              <div class="syphonylisting">
+                <% symphs = composer.symphonies %>
+                <% symphs.each do |symph| %>
+                  <p><%= symph.formatted_string %></p>
+                <% end %>
+                <p></p>
+                <p><%= "      Count: #{symphs.count}, Average time: #{symphs.average_runtime.to_i}" %></p>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
-
 
       <div id="pagestats">
         <p>Total Composers: <%= @composers.total_shown %></p>
         <p>Average Age at Death: <%= @composers.average_age.to_i %></p>
         <p>Average Symphony Runtime: <%= @composers.get_symphonies.average_runtime.to_i %></p>
-        <p>Cities of Residence: <%= @composers.distinct.pluck(:city).join(', ') %></p>
+        <p>Cities of Residence: <%= @cities.join(", ") %></p>
         <p>Total Symphonies shown: <%= @composers.get_symphonies.count %></p>
       </div>
 
